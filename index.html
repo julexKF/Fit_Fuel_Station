@@ -7,13 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <meta charset="UTF-8" />
-  <link type="text/css" rel="stylesheet" href="prueba.css" />
-  <link type="text/css" rel="stylesheet" href="loader.css" />
+  <link type="text/css" rel="stylesheet" href="css/prueba.css" />
+  <link type="text/css" rel="stylesheet" href="css/loader.css" />
   <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="text/javascript" src="loader.js"></script>
+  <script type="text/javascript" src="js/loader.js"></script>
+  <link rel="stylesheet" href="plugin/components/Font Awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/whatsapp-chat-support.css">
 
   <title>FIT FUEL STATION</title>
+ 
 </head>
 
 <body onload="hideLoader()">
@@ -88,7 +91,7 @@
     <div class="navbar">
       <div class="navbar-left">
         <img class="logo-left" src="img/Healthy_Food_1.png" />
-        <div><a href="test.html" style="text-decoration: none; color: inherit;">Menú</a></div>
+        <div><a href="menu.html" style="text-decoration: none; color: inherit;">Menú</a></div>
         <div><a href="#" style="text-decoration: none; color: inherit;">Recompensas</a></div>
         <div><a href="#" style="text-decoration: none; color: inherit;">Tarjeta de Regalo</a></div>
       </div>
@@ -102,7 +105,7 @@
           </svg>
           <div>Contáctanos</div>
         </div>
-        <div class="sign-in">iniciar sesión</div>
+        <div class="sign-in">Iniciar sesión</div>
         <div class="join-now">Únete ahora</div>
       </div>
     </div>
@@ -222,7 +225,8 @@
                   <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <a href="#" class="follow button"><i class="fas fa-plus"></i></a>
+                <a class="follow button add-to-cart"><i class="fas fa-plus"></i></a>
+
               </div>
             </div>
 
@@ -275,7 +279,7 @@
                   <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <a href="#" class="follow button"><i class="fas fa-plus"></i></a>
+                <a  class="follow button add-to-cart"><i class="fas fa-plus"></i></a>
               </div>
             </div>
 
@@ -327,7 +331,7 @@
                   <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <a href="#" class="follow button"><i class="fas fa-plus"></i></a>
+                <a class="follow button add-to-cart"><i class="fas fa-plus"></i></a>
               </div>
             </div>
 
@@ -378,7 +382,7 @@
                   <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <a href="#" class="follow button"><i class="fas fa-plus"></i></a>
+                <a class="follow button add-to-cart"><i class="fas fa-plus"></i></a>
               </div>
             </div>
 
@@ -429,7 +433,7 @@
                   <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <a href="#" class="follow button"><i class="fas fa-plus"></i></a>
+                <a class="follow button add-to-cart"><i class="fas fa-plus"></i></a>
               </div>
             </div>
 
@@ -480,7 +484,7 @@
                   <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
                 </a>
 
-                <a href="#" class="follow button"><i class="fas fa-plus"></i></a>
+                <a class="follow button add-to-cart"><i class="fas fa-plus"></i></a>
               </div>
             </div>
 
@@ -509,16 +513,32 @@
         <p style="color: #818181; font-size: smaller">2024 © All Rights Reserved</p>
       </div>
       <div class="col col2">
-        <p>Acerca de</p>
-        <p>Nuestra Misión</p>
-        <p>Politica de Privacidad</p>
-        <p>Terminos y condiciones</p>
+        <a href="#">
+          <p>Acerca de</p>
+        </a>
+        <a href="#">
+          <p>Nuestra Misión</p>
+        </a>
+        <a href="#">
+          <p>Politica de Privacidad</p>
+        </a>
+        <a href="#">
+          <p>Terminos y condiciones</p>
+        </a>
       </div>
       <div class="col col3">
-        <p>Servicios</p>
-        <p>Productos</p>
-        <p>Unete a nuestro equipo</p>
-        <p>Apoyanos</p>
+        <a href="#">
+          <p>Servicios</p>
+        </a>
+        <a href="#">
+          <p>Productos</p>
+        </a>
+        <a href="#">
+          <p>Unete a nuestro equipo</a>
+        </a>
+        <a href="#">
+          <p>Apoyanos</p>
+        </a>
       </div>
       <div class="backdrop"></div>
     </footer>
@@ -527,8 +547,67 @@
   <input style="opacity: 0; margin-bottom: 0px;" id="click-spark-color" name="click-spark-color" />
 
   <click-spark></click-spark>
-  <script type="text/javascript" src="jsmain.js"></script>
+  
 
+  <div class="whatsapp_chat_support wcs_fixed_right" id="button-w">
+    <div class="wcs_button_label">
+      Contáctanos
+    </div>
+    <div class="wcs_button wcs_button_circle">
+      <span class="fa fa-whatsapp"></span>
+    </div>
+
+    <div class="wcs_popup">
+      <div class="wcs_popup_close">
+        <span class="fa fa-close"></span>
+      </div>
+      <div class="wcs_popup_header">
+        <span class="fa fa-whatsapp"></span>
+        <strong>Fit Fuel Station</strong>
+
+        <div class="wcs_popup_header_description">¿Necesidad de ayuda? Escribenos!! </div>
+
+      </div>
+      <div class="wcs_popup_input" data-number="+51 902424413"
+        data-availability='{ "monday":"07:00-22:30", "tuesday":"07:00-22:30", "wednesday":"07:00-19:00", "thursday":"07:00-22:30", "friday":"07:00-22:30", "saturday":"09:00-18:30", "sunday":"09:00-22:30" }'>
+        <input type="text" placeholder="Escribir pregunta!" />
+        <i class="fa fa-play"></i>
+      </div>
+      <div class="wcs_popup_avatar">
+        <img src="img/7414124.png" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- jQuery 1.8+ -->
+  <script src="plugin/components/jQuery/jquery-1.11.3.min.js"></script>
+  <!-- Plugin JS file -->
+  <script src="plugin/components/moment/moment.min.js"></script>
+  <script src="plugin/components/moment/moment-timezone-with-data.min.js"></script> <!-- spanish language (es) -->
+  <script src="js/whatsapp-chat-support.js"></script>
+  <script>
+    $('#button-w').whatsappChatSupport({
+      defaultMsg: '',
+    });
+  </script>
+
+<div id="cart" class="cart">
+  <div class="cart-header">
+      <h2>Carrito de Compras</h2>
+      <button id="cart-close" class="cart-close">X</button>
+  </div>
+  <div class="cart-content">
+      <p>No hay productos en el carrito.</p>
+  </div>
+  <div class="cart-footer">
+      <a href="pay.html"><button id="checkout" class="checkout-button">Ir a pagar</button></a>
+  </div>
+</div>
+<button id="cart-toggle" class="cart-toggle">🛒</button>
+
+
+ 
 </body>
-
+<script type="text/javascript" src="js/jsmain.js"></script>
 </html>
