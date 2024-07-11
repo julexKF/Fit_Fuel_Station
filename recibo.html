@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Fuel Station</title>
+    <link rel="stylesheet" href="css/recibo.css">
+</head>
+<body>
+    <!-- Reciept top-half -->
+<div id="wrapper">
+    <div class="card">
+      <div class="icon">
+      </div>
+      <h1>
+        ¡Listo, pedido completo!
+      </h1>
+      <p>
+        Tu pedido va en camino, se paciente.
+      </p>
+    </div>
+    <!-- Reciept bottom-half -->
+    <div class="card">
+      <ul>
+        <li>
+          <span>Pedido</span>
+          <span>Total</span>
+        </li>
+        <li>
+          <span>Tortilla con Pollo y Verduras X2</span>
+          <span>S/.....</span>
+        </li>
+        <li>
+          <span>Ensalada Coleslaw X1</span>
+          <span>S/.....</span>
+        </li>
+        <li>
+          <span>Total</span>
+          <span>S/.....</span>
+        </li>
+      </ul>
+    </div>
+    <!-- Reciept CTA -->
+    <div class="card">
+        <div class="cta-row">
+            <button class="secondary" onclick="redirectTo('prueba.html')">Inicio</button>
+            <button onclick="redirectTo('menu.html')">Menú</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+  
+  <!-- Template -->
+  
+</body>
+</html>
