@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Mukta:700');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
-
 body {
   font-family: "Waffle Soft",
     sans-serif;
@@ -381,7 +380,8 @@ body {
 }
 
 .bar ul {
-  padding-left: 170px;
+  padding-left: 8%;
+  padding-right: 4%;
   font-size: 20px;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
@@ -398,7 +398,7 @@ body {
 
 .bar li {
   margin-left: 20px;
-  margin-right: 45px;
+  margin-right: 40px;
   /* Espacio entre los elementos li */
   transition: transform 0.3s, background-color 0.3s;
   /* Transición para el efecto de acercamiento y el color */
@@ -418,7 +418,7 @@ body {
 }
 
 .bar li a img {
-  margin-right: 100px;
+  margin-right: 80px;
   /* Espacio entre el icono y el texto */
 }
 
@@ -484,6 +484,7 @@ body {
 .Parrafo,
 .Parrafo2 {
   opacity: 50%;
+  line-height: 25px;
 }
 
 .Titulo2,
@@ -637,27 +638,27 @@ a.tag,
   position: relative;
 
   &:nth-of-type(1) .preview-image {
-    background-image: url("img/ensalada-de-tallarines-de-trigo-sarraceno-y-garbanzos-con-salsa-de-miso_c1fc0d37_230929084156_2000x1350.jpg");
+    background-image: url("../img/ensalada-de-tallarines-de-trigo-sarraceno-y-garbanzos-con-salsa-de-miso_c1fc0d37_230929084156_2000x1350.jpg");
   }
 
   &:nth-of-type(2) .preview-image {
-    background-image: url("img/frittata_d4b5e101_231222005744_1280x720.jpg");
+    background-image: url("../img/frittata_d4b5e101_231222005744_1280x720.jpg");
   }
 
   &:nth-of-type(3) .preview-image {
-    background-image: url("img/coleslaw.jpg");
+    background-image: url("../img/coleslaw.jpg");
   }
 
   &:nth-of-type(4) .preview-image {
-    background-image: url("img/macedoniadepiña.jpg");
+    background-image: url("../img/macedoniadepiña.jpg");
   }
 
   &:nth-of-type(5) .preview-image {
-    background-image: url("img/pasteldequinoa.jpg ");
+    background-image: url("../img/pasteldequinoa.jpg ");
   }
 
   &:nth-of-type(6) .preview-image {
-    background-image: url("img/pastacarneyqueso.jpg");
+    background-image: url("../img/pastacarneyqueso.jpg");
   }
 }
 
@@ -1229,7 +1230,9 @@ main {
   align-items: center;
   pointer-events: none;
   opacity: 1;
-  margin: 2%;
+  margin-left: 4%;
+  margin-top: 1%;
+  margin-bottom: 1%;
   width: 90%;
 
 }
@@ -1239,7 +1242,8 @@ main {
 /*Footer*/
 
 footer {
-
+  font-family: "Waffle Soft",
+  sans-serif;
   margin-bottom: 0cap;
   z-index: 4;
   display: flex;
@@ -1258,6 +1262,10 @@ footer {
   justify-content: flex-start;
   padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
   width: 28%;
+  
+}
+.col a{
+  text-decoration: none;
 }
 
 .col2,
@@ -1265,6 +1273,7 @@ footer {
   background-color: #e8f3a7;
   border-radius: calc(0.5 * var(--m))
 }
+
 
 .social .insta {
   height: calc(0.6 * var(--m));
@@ -1317,4 +1326,282 @@ footer {
   align-content: stretch;
   flex-direction: column;
   border-radius: 50px;
+}
+
+
+
+/*Carrito de compras*/
+
+
+.cart {
+    max-height: 0; /* Inicialmente colapsado */
+    overflow: hidden; /* Oculta el contenido que desborda */
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 300px;
+    max-height: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+    transition: max-height 0.8s ease-in-out; /* Efecto de transición */
+}
+.cart.open {
+  max-height: 400px; /* Altura máxima cuando está expandido */
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+.cart-header h2{
+  line-height: 20px;
+  font-size: 20px;
+}
+
+.cart-close {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cart-content {
+    padding: 10px;
+}
+
+.cart-item .cart-decrement, .cart-increment{
+border-radius: 10px;
+font-size: 15px;
+margin: 4%;
+}
+
+.cart-content span{
+  line-height: 20px;
+  margin-right: 2%;
+  font-size: 18px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item span {
+    flex: 1;
+}
+
+.cart-item div {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item .quantity {
+    margin: 0 10px;
+}
+
+.cart-footer {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    background-color: #f5f5f5;
+}
+
+.cart-toggle {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: #00754a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+
+.checkout-button {
+    background-color: #00754a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #153a20;
+}
+
+
+.receipt-container {
+    transform: scale(1.6);
+    transform-origin: top;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.receipt-container body {
+    padding: 0;
+    background-color: #EFE8E2;
+    font-family: tahoma;
+}
+
+.receipt-container .paid {
+    display: none;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 25px;
+    border-radius: 0px 0px 10px 10px;
+    padding-bottom: 25px;
+    color: #00773D;
+    line-height: 30px;
+}
+
+.paid p {
+    line-height: 20px;
+    text-align: center;
+}
+
+.receipt-container .paid p {
+    background-image: url("http://dc455.4shared.com/download/VILITso0/tsid20130720-183900-9216b81f/check.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 1%;
+    width: 190px;
+    margin: 0 auto;
+}
+
+.receipt-container .container {
+    width: 350px;
+    margin-top: 20%;
+    margin-bottom: 30%;
+}
+
+.receipt-container .tab {
+    width: 350px;
+    margin: 0 auto;
+    height: 10px;
+    background-color: #2B2929;
+    border-radius: 50px;
+}
+
+.receipt-container .receipt {
+    background-color: #FAFAF9;
+    padding-top: 20px;
+    width: 300px;
+    height: 300px;
+    margin: -5px auto;
+    border-radius: 5px 5px 50px 50px;
+    -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.receipt-container .paper {
+    border-top: 1px dashed #ccc;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.receipt-container .title {
+    color: #00773D;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    float: left;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.receipt-container .date {
+    color: #00773D;
+    margin-top: 20px;
+    margin-right: 10px;
+    font-weight: lighter;
+    float: right;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.receipt-container table {
+    clear: both;
+    width: 95%;
+    margin: 0 auto;
+    color: #5B5B5B;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.receipt-container .right {
+    text-align: right;
+}
+
+.receipt-container .center {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.receipt-container input[type=button] {
+    background-color: #00874C;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 30px;
+    background-image: url("http://dc707.4shared.com/img/zr6_o80l/s3/13ffd4de138/cart.png");
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+.receipt-container input[type=button]:hover {
+    -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    color: #f0f0f0;
+}
+
+.receipt-container .barcode {
+    height: 10px;
+    width: 0;
+    box-shadow: 1px 0 0 1px #343434, 5px 0 0 1px #343434, 10px 0 0 1px #343434, 11px 0 0 1px #343434, 15px 0 0 1px #343434, 18px 0 0 1px #343434, 22px 0 0 1px #343434, 23px 0 0 1px #343434, 26px 0 0 1px #343434, 30px 0 0 1px #343434, 35px 0 0 1px #343434, 37px 0 0 1px #343434, 41px 0 0 1px #343434, 44px 0 0 1px #343434, 47px 0 0 1px #343434, 51px 0 0 1px #343434, 56px 0 0 1px #343434, 59px 0 0 1px #343434, 64px 0 0 1px #343434, 68px 0 0 1px #343434, 72px 0 0 1px #343434, 74px 0 0 1px #343434, 77px 0 0 1px #343434, 81px 0 0 1px #343434;
+    display: inline-block;
+    margin-right: 85px;
+}
+
+.receipt-container .sign {
+    text-align: center;
+    font-size: 17px;
+}
+
+.receipt-container .thankyou {
+    line-height: 14px;
+    font-size: 10px;
+    margin-top: 5px;
+    color: #5B5B5B;
+    width: 100%;
 }
